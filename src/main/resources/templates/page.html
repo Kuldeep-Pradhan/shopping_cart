@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head th:replace="/fragments/head"></head>
+
+<body>
+
+    <nav th:replace="/fragments/nav :: nav-front"></nav>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div th:replace="/fragments/categories"></div>
+            <div class="col"></div>
+            <div class="col-7"  th:if="${page.slug == 'home'}">
+                <div class="container-fluid"> 
+                    <a href="/category/mobile-phones">
+                        <img class="w-100 mb-2" src="/images/offers5.jpg" alt="">
+
+                        <img class="w-33" src="/images/offers1.jpg" alt="">
+                        <img class="w-33" src="/images/offers2.jpg" alt="">
+                        <img class="w-33" src="/images/offers3.jpg" alt="">
+                        <img class="w-33" src="/images/offers4.jpg" alt="">
+                        <img class="w-33" src="/images/offers8.jpg" alt="">
+                        <img class="w-33" src="/images/offers9.jpg" alt="">
+                        
+                    </a>
+                </div>
+
+                <div class="container-fluid mt-4">
+                    <a href="/category/laptops">
+                        <img class="w-100" src="/images/laptop-offers.jpg" alt="">
+                        <img class="w-100" src="/images/laptop-offers2.jpg" alt="">
+
+                        <img class="w-100 mt-2" src="/images/laptop-offers7.jpg" alt="">
+
+                        <div class="d-flex justify-content-center">
+                            <img class="w-25" src="/images/laptop-offers3.jpg" alt="">
+                            <img class="w-25" src="/images/laptop-offers4.jpg" alt="">
+                            <img class="w-25" src="/images/laptop-offers5.jpg" alt="">
+                            <img class="w-25" src="/images/laptop-offers6.jpg" alt="">
+
+                         </div>
+
+                         <img class="w-100" src="/images/laptop-offers8.jpg" alt="">
+                         <div class="d-flex justify-content-center">
+                            <img class="w-25" src="/images/laptop-offers9.jpg" alt="">
+                            <img class="w-25" src="/images/laptop-offers10.jpg" alt="">
+                            <img class="w-25" src="/images/laptop-offers11.jpg" alt="">
+                            <img class="w-25" src="/images/laptop-offers12.jpg" alt="">
+
+                         </div>
+
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="col-7"  th:unless="${page.slug == 'home'}">
+                <div th:utext="${page.content}"></div>
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <div th:replace="/fragments/footer"></div>
+
+</body>
+
+</html>
